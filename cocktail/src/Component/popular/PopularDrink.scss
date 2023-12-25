@@ -1,0 +1,55 @@
+
+
+// Container styles
+.popular-drinks-container {
+  text-align: center;
+  margin: 20px;
+
+  // .title {
+  //   font-size: 24px;
+  //   margin-bottom: 20px;
+  // }
+
+  .drinks-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .drink-item {
+      margin: 30px;
+      background-color: #f8f8f8;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        .drink-image-container {
+          overflow: hidden;//bir öğenin sınırlarının dışına taşmamasını önler
+
+          img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+          }
+        }
+
+        .drink-name {
+          padding: 10px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

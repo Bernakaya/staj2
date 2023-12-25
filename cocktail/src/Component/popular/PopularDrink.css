@@ -1,0 +1,40 @@
+.popular-drinks-container {
+  text-align: center;
+  margin: 20px;
+}
+.popular-drinks-container .drinks-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.popular-drinks-container .drinks-list .drink-item {
+  margin: 30px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.popular-drinks-container .drinks-list .drink-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease-in-out;
+}
+.popular-drinks-container .drinks-list .drink-item a:hover {
+  transform: scale(1.05);
+}
+.popular-drinks-container .drinks-list .drink-item a .drink-image-container {
+  overflow: hidden;
+}
+.popular-drinks-container .drinks-list .drink-item a .drink-image-container img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+}
+.popular-drinks-container .drinks-list .drink-item a .drink-name {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}/*# sourceMappingURL=PopularDrink.css.map */

@@ -1,0 +1,53 @@
+.non-alcoholic-body {
+  background-color: #f0f0f0;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.non-alcoholic-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.non-alcoholic-h2 {
+  color: #333;
+  text-align: center;
+}
+
+.non-alcoholic-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.non-alcoholic-li {
+  width: 30%;
+  margin: 10px 0;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+}
+.non-alcoholic-li:hover {
+  transform: scale(1.05);
+}
+.non-alcoholic-li .non-alcoholic-a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  text-align: center;
+}
+.non-alcoholic-li .non-alcoholic-a .non-alcoholic-h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+.non-alcoholic-li .non-alcoholic-a .non-alcoholic-img {
+  width: 60%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}/*# sourceMappingURL=NonAlcoholicPage.css.map */

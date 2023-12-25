@@ -1,0 +1,66 @@
+// CocktailPage.scss
+
+// Container styles
+.container2 {
+    max-width: 900px;
+    margin: 0 auto;
+  
+    // Header styles
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+  
+    // Cocktail list styles
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  
+    // Individual cocktail item styles
+    li {
+      border: 1px solid #ddd;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+  
+      h3 {
+        margin-top: 13px;
+        font-size: 20px;
+      }
+  
+      img {
+        width: 95%;
+        max-height: 200px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+  
+      p {
+        margin-top: 10px;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 10px;
+  
+        li {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  
+    // Link styles
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+  }
+  

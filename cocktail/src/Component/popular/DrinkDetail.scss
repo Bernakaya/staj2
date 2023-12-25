@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    background-color:#FAFAD2;
+
+  }
+  
+  .cocktail-detail-container {
+    background-color:#FAFAD2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;    margin-top: 50px;
+  }
+  
+  .cocktail-detail-container h2 {
+    color: black;
+  }
+  
+  .cocktail-detail-container img {
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cocktail-detail-container h3 {
+    color:black;
+  }
+  
+  .cocktail-detail-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cocktail-detail-container li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color:black;
+  }
+  
+ 

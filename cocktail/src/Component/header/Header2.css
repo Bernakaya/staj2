@@ -1,0 +1,64 @@
+.header {
+  background-color: #001F3F;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5);
+}
+
+.nav-link {
+  color: white;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: white;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.form-inline {
+  margin-right: 16px;
+}
+
+.nav-link {
+  margin-right: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #28a745;
+}
+
+.mr-sm-2 {
+  width: 300px;
+  margin-top: 20px;
+  margin-left: -30px;
+}
+
+.button {
+  margin-top: -65px;
+  margin-left: 305px;
+  margin-right: 10px;
+}
+
+.nav-link-white {
+  color: white !important;
+  margin-left: 100px;
+}
+
+.nav-dropdown-item-white {
+  color: white;
+}/*# sourceMappingURL=Header2.css.map */
