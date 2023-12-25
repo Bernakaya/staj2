@@ -49,6 +49,13 @@ const Header2 = ({ onSearch, onCategoryChange }) => {
     }
   };
 
+  const handleSearchSubmit = (e) => {
+    e.preventDefault(); // Formun otomatik olarak sayfayı yenilemesini önle
+
+    // Arama işlemini gerçekleştir
+    handleSearch();
+  };
+
   return (
     <header className="header">
       <Navbar expand="lg" className="nav-container">
@@ -106,7 +113,7 @@ const Header2 = ({ onSearch, onCategoryChange }) => {
             </NavDropdown>
           </Nav>
 
-          <Form inline='true'>
+          <Form inline onSubmit={handleSearchSubmit}>
             <FormControl
               type="text"
               placeholder="Ara"
@@ -114,7 +121,7 @@ const Header2 = ({ onSearch, onCategoryChange }) => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <Button className='button' variant="outline-success" onClick={handleSearch}>
+            <Button className='button' variant="outline-success" type="submit">
               Ara
             </Button>
           </Form>
