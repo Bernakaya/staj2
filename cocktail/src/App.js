@@ -40,7 +40,7 @@ const App = () => {
   };
 
   return (
-    <Provider store={store}> {/* Redux store'u sağlamak için Provider ekleyin */}
+    <Provider store={store}> 
       <Router>
         <div>
           <Header2 onSearch={handleSearch} />
