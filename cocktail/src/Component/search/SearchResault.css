@@ -1,0 +1,27 @@
+div ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+div ul li {
+  margin-bottom: 20px;
+}
+div ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+div ul li a img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+div ul li a:hover {
+  color: #333;
+  text-decoration: none;
+}/*# sourceMappingURL=SearchResault.css.map */

@@ -1,6 +1,7 @@
 // components/SearchResult.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './SearchResault.css'
 
 const SearchResult = ({ searchResults }) => {
   return (
