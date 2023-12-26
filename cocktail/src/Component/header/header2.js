@@ -35,6 +35,7 @@ const Header2 = ({ onSearch, onCategoryChange }) => {
       }
 
       navigate(`/search/${searchQuery}`);
+      setSearchQuery(''); // Arama yapıldıktan sonra arama kısmını temizle
     } catch (error) {
       console.error('Error fetching drink data:', error);
     }
@@ -55,6 +56,8 @@ const Header2 = ({ onSearch, onCategoryChange }) => {
     // Arama işlemini gerçekleştir
     handleSearch();
   };
+
+ 
 
   return (
     <header className="header">
