@@ -1,5 +1,5 @@
 // CocktailPage.js
-import './commonstyle.css';
+import './scss/commonstyle.css';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 

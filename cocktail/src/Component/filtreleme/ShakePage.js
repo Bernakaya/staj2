@@ -1,6 +1,6 @@
 // ShakePage.js
 import React, { useState, useEffect } from 'react';
-import './commonstyle.css';
+import './scss/commonstyle.css';
 import { Link } from 'react-router-dom';
 const ShakePage = () => {
   const [shakeList, setShakeList] = useState([]);

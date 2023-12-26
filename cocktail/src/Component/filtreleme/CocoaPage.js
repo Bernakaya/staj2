@@ -1,7 +1,7 @@
 // CocoaPage.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './commonstyle.css';
+import './scss/commonstyle.css';
 
 const CocoaPage = () => {
   const [cocoaList, setCocoaList] = useState([]);

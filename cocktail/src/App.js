@@ -5,7 +5,7 @@ import PopularDrinks from './Component/popular/PopularDrinks';
 import DrinkDetail from './Component/popular/DrinkDetail';
 import AlcoholicPage from './Component/filtreleme/AlcoholicPage.js';
 import NonAlcoholicPage from './Component/filtreleme/NonAlcoholicPage.js';
-import CocktailPage from './Component/filtreleme/CocktailPage.js';
+import CocktailPage from './Component/filtreleme/CocktaiPage';
 import CocoaPage from './Component/filtreleme/CocoaPage.js';
 import Footer from './Component/footer/Footer.js';
 import Header2 from './Component/header/header2.js';

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
- import './AlcoholicPage.css'
-import'./commonstyle.css'
+
+import './scss/commonstyle.css';
+
 
 const chunkArray = (array, size) => {
   const result = [];
