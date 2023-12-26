@@ -19,9 +19,12 @@ const SearchPage = () => {
     navigate(`/drink/${drinkId}`);
   };
 
+  // İlk harfi büyük yapın
+  const correctedQuery = query.charAt(0).toUpperCase() + query.slice(1);
+
   return (
     <div>
-      <h2>Search Results: {query}</h2>
+      <h2>{correctedQuery}</h2>
       <SearchResult searchResults={searchResults} onDrinkDetail={handleDrinkDetail} />
     </div>
   );
