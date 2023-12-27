@@ -1,66 +1,68 @@
-// CocktailPage.scss
-
 // Container styles
 .container2 {
-    max-width: 900px;
-    margin: 0 auto;
-  
-    // Header styles
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
-  
-    // Cocktail list styles
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-  
-    // Individual cocktail item styles
-    li {
-      border: 1px solid #ddd;
-      margin: 10px;
-      padding: 10px;
-      text-align: center;
-  
-      h3 {
-        margin-top: 13px;
-        font-size: 20px;
-      }
-  
-      img {
-        width: 95%;
-        max-height: 200px;
-        object-fit: cover;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-  
-        &:hover {
-          transform: scale(1.05);
-        }
-      }
-  
-      p {
-        margin-top: 10px;
-      }
-  
-      ul {
-        list-style: none;
-        padding: 0;
-        margin-top: 10px;
-  
-        li {
-          margin-bottom: 5px;
-        }
-      }
-    }
-  
-    // Link styles
-    a {
-      text-decoration: none;
-      color: #333;
-    }
+  max-width: 600px;    // Maksimum genişlik 600 piksel
+  margin: 0 auto;      // Ortalanmış (margin: 0 auto ile)
+
+  // Header styles
+  h2 {
+      text-align: center;   // Başlık ortalanmış
+      margin-bottom: 20px;  // 20 piksel alt boşluk
+      font-size: 24px;      // 24 piksel font büyüklüğü
   }
-  
+
+  // Cocktail list styles
+  ul {
+      list-style: none;  // Liste işaretini kaldır
+      padding: 0;        // İç boşluğu sıfırla
+  }
+
+  // Individual cocktail item styles
+  li {
+       
+      margin: 10px;            // 10 piksel dış boşluk
+      padding: 10px;           // 10 piksel iç boşluk
+      text-align: center;      // İçerik ortalanmış
+
+      // Nested h3 styles
+      h3 {
+          margin-top: 13px;  // 13 piksel üst boşluk
+          font-size: 20px;   // 20 piksel font büyüklüğü
+      }
+
+      // Nested img styles
+      img {
+          width: 50%;                  // Resim genişliği %50
+          max-height: 100%;            // Maksimum yükseklik 400 piksel
+          object-fit: cover;           // Nesne uyumu (resmi kapla)
+          cursor: pointer;             // İmleç tipi
+          transition: transform 0.3s ease;  // Geçiş efekti: transform 0.3 saniye süresince, kolay (ease) fonksiyonu ile
+
+          &:hover {
+              transform: scale(1.05);   // Hover durumunda biraz büyütme efekti
+          }
+      }
+
+      // Nested p styles
+      p {
+          margin-top: 10px;  // 10 piksel üst boşluk
+      }
+
+      // Nested ul styles
+      ul {
+          list-style: none;  // Alt liste işaretini kaldır
+          padding: 0;        // İç boşluğu sıfırla
+          margin-top: 10px;   // 10 piksel üst boşluk
+
+          // Nested li styles
+          li {
+              margin-bottom: 5px;  // 5 piksel alt boşluk
+          }
+      }
+  }
+
+  // Link styles
+  a {
+      text-decoration: none;  // Metin dekorasyonunu kaldır
+      color: #333;            // Metin rengi: koyu gri (#333)
+  }
+}

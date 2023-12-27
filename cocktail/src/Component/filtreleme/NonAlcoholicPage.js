@@ -1,23 +1,13 @@
-// NonAlcoholicPage.js
-
+// NonAlcoholicCocktailPage.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './scss/commonstyle.css';
 
-const chunkArray = (array, size) => {
-  const result = [];
-  for (let i = 0; i < array.length; i += size) {
-    result.push(array.slice(i, i + size));
-  }
-  return result;
-};
-
-const NonAlcoholicPage = () => {
-  const [nonAlcoholicDrinks, setNonAlcoholicDrinks] = useState([]);
+const NonAlcoholicCocktailPage = () => {
+  const [cocktailList, setCocktailList] = useState([]);
 
   useEffect(() => {
-    const fetchNonAlcoholicDrinks = async () => {
-      const url = 'https://the-cocktail-db.p.rapidapi.com/filter.php?a=Non_Alcoholic';
+    const fetchNonAlcoholicCocktailList = async () => {
+      const url = 'https://the-cocktail-db.p.rapidapi.com/filter.php?a=Non_Alcoholic'; // 'a=Non_Alcoholic' eklenen kısım
       const options = {
         method: 'GET',
         headers: {
@@ -29,36 +19,45 @@ const NonAlcoholicPage = () => {
       try {
         const response = await fetch(url, options);
         const data = await response.json();
-        setNonAlcoholicDrinks(data.drinks || []);
+        setCocktailList(data.drinks || []);
       } catch (error) {
         console.error(error);
       }
     };
 
-    fetchNonAlcoholicDrinks();
+    fetchNonAlcoholicCocktailList();
   }, []);
 
   return (
-    <div className="non-alcoholic-body">
-      <h2 className="non-alcoholic-h2">Alkolsüz İçecekler</h2>
-      {chunkArray(nonAlcoholicDrinks, 3).map((row, rowIndex) => (
-        <ul key={rowIndex} className="non-alcoholic-ul">
-          {row.map((drink) => (
-            <li key={drink.idDrink} className="non-alcoholic-li">
-              <Link to={`/drink/${drink.idDrink}`} className="non-alcoholic-a">
-                <h3 className="non-alcoholic-h3">{drink.strDrink}</h3>
-                <img
-                  src={drink.strDrinkThumb}
-                  alt={drink.strDrink}
-                  className="non-alcoholic-img"
-                />
-              </Link>
-            </li>
-          ))}
-        </ul>
-      ))}
+    <div className='container2'>
+      <h2>Non-Alcoholic Cocktail List</h2>  
+      <ul>
+        {cocktailList.map((cocktail) => (
+          <li key={cocktail.idDrink}>
+            <Link to={`/drink/${cocktail.idDrink}`} className="cocktail-link">
+              <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+              <h3>{cocktail.strDrink}</h3>
+              <p>{cocktail.strInstructions}</p>
+              <ul>
+                {Array.from({ length: 15 }, (_, index) => index + 1).map((ingredientIndex) => {
+                  const ingredient = cocktail[`strIngredient${ingredientIndex}`];
+                  const measure = cocktail[`strMeasure${ingredientIndex}`];
+                  if (ingredient && measure) {
+                    return (
+                      <li key={ingredientIndex}>
+                        {measure} {ingredient}
+                      </li>
+                    );
+                  }
+                  return null;
+                })}
+              </ul>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
 
-export default NonAlcoholicPage;
+export default NonAlcoholicCocktailPage;

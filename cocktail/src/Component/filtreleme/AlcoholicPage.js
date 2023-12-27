@@ -1,23 +1,13 @@
+// AlcoholicPage.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import './scss/commonstyle.css';
-
-
-const chunkArray = (array, size) => {
-  const result = [];
-  for (let i = 0; i < array.length; i += size) {
-    result.push(array.slice(i, i + size));
-  }
-  return result;
-};
-
 const AlcoholicPage = () => {
-  const [alcoholicDrinks, setAlcoholicDrinks] = useState([]);
+  const [cocktailList, setCocktailList] = useState([]);
 
   useEffect(() => {
-    const fetchAlcoholicDrinks = async () => {
-      const url = 'https://the-cocktail-db.p.rapidapi.com/filter.php?a=Alcoholic';
+    const fetchAlcoholicCocktailList = async () => {
+      const url = 'https://the-cocktail-db.p.rapidapi.com/filter.php?a=Alcoholic'; // 'a=Alcoholic' eklenen kısım
       const options = {
         method: 'GET',
         headers: {
@@ -29,30 +19,43 @@ const AlcoholicPage = () => {
       try {
         const response = await fetch(url, options);
         const data = await response.json();
-        setAlcoholicDrinks(data.drinks || []);
+        setCocktailList(data.drinks || []);
       } catch (error) {
         console.error(error);
       }
     };
 
-    fetchAlcoholicDrinks();
+    fetchAlcoholicCocktailList();
   }, []);
 
   return (
-    <div>
-      <h2>Alkollü İçecekler</h2>
-      {chunkArray(alcoholicDrinks, 3).map((row, rowIndex) => (
-        <ul key={rowIndex}>
-          {row.map((drink) => (
-            <li key={drink.idDrink}>
-              <Link className='link' to={`/drink/${drink.idDrink}`}>
-                <h3>{drink.strDrink}</h3>
-                <img src={drink.strDrinkThumb} alt={drink.strDrink} className='resim'/>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      ))}
+    <div className='container2'>
+      <h2>Alcoholic Cocktail List</h2>  
+      <ul>
+        {cocktailList.map((cocktail) => (
+          <li key={cocktail.idDrink}>
+            <Link to={`/drink/${cocktail.idDrink}`} className="cocktail-link">
+              <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+              <h3>{cocktail.strDrink}</h3>
+              <p>{cocktail.strInstructions}</p>
+              <ul>
+                {Array.from({ length: 15 }, (_, index) => index + 1).map((ingredientIndex) => {
+                  const ingredient = cocktail[`strIngredient${ingredientIndex}`];
+                  const measure = cocktail[`strMeasure${ingredientIndex}`];
+                  if (ingredient && measure) {
+                    return (
+                      <li key={ingredientIndex}>
+                        {measure} {ingredient}
+                      </li>
+                    );
+                  }
+                  return null;
+                })}
+              </ul>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

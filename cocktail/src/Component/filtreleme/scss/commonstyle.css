@@ -1,5 +1,5 @@
 .container2 {
-  max-width: 900px;
+  max-width: 600px;
   margin: 0 auto;
 }
 .container2 h2 {
@@ -12,7 +12,6 @@
   padding: 0;
 }
 .container2 li {
-  border: 1px solid #ddd;
   margin: 10px;
   padding: 10px;
   text-align: center;
@@ -22,8 +21,8 @@
   font-size: 20px;
 }
 .container2 li img {
-  width: 95%;
-  max-height: 200px;
+  width: 50%;
+  max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
