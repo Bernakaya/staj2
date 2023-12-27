@@ -23,7 +23,7 @@ const SearchResult = ({ searchResults }) => {
                 <img
                   src={drink.strDrinkThumb}
                   alt={drink.strDrink}
-                  style={{ width: '100px', height: '100px', objectFit: 'cover' }}
+                  style={{ width: '100px', height: '100px', objectFit: 'cover' ,borderRadius:'8px',marginBottom:'8px'}}
                 />
                 {drink.strDrink}
               </Link>
