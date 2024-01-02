@@ -34,7 +34,7 @@ const ShotPage = () => {
       <ul>
         {shotList.map((drink) => (
           <li key={drink.idDrink}>
-          <Link to={`/drink/${drink.idDrink}`}>
+          <Link to={`/drink/${drink.idDrink}`} className="cocktail-link">
   <h3>{drink.strDrink}</h3>
   <img src={drink.strDrinkThumb} alt={drink.strDrink} />
 </Link>

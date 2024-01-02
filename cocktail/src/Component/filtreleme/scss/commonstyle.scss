@@ -1,68 +1,135 @@
-// Container styles
-.container2 {
-  max-width: 600px;    // Maksimum genişlik 600 piksel
-  margin: 0 auto;      // Ortalanmış (margin: 0 auto ile)
+// // Container styles
+// .container2 {
+//   max-width: 600px;    // Maksimum genişlik 600 piksel
+//   margin: 0 auto;      // Ortalanmış (margin: 0 auto ile)
 
-  // Header styles
-  h2 {
-      text-align: center;   // Başlık ortalanmış
-      margin-bottom: 20px;  // 20 piksel alt boşluk
-      font-size: 24px;      // 24 piksel font büyüklüğü
-  }
+//   // Header styles
+//   h2 {
+//       text-align: center;   // Başlık ortalanmış
+//       margin-bottom: 20px;  // 20 piksel alt boşluk
+//       font-size: 24px;      // 24 piksel font büyüklüğü
+//   }
 
-  // Cocktail list styles
-  ul {
-      list-style: none;  // Liste işaretini kaldır
-      padding: 0;        // İç boşluğu sıfırla
-  }
+//   // Cocktail list styles
+//   ul {
+//       list-style: none;  // Liste işaretini kaldır
+//       padding: 0;        // İç boşluğu sıfırla
+//   }
 
-  // Individual cocktail item styles
-  li {
+//   // Individual cocktail item styles
+//   li {
        
-      margin: 10px;            // 10 piksel dış boşluk
-      padding: 10px;           // 10 piksel iç boşluk
-      text-align: center;      // İçerik ortalanmış
+//       margin: 10px;            // 10 piksel dış boşluk
+//       padding: 10px;           // 10 piksel iç boşluk
+//       text-align: center;      // İçerik ortalanmış
 
-      // Nested h3 styles
-      h3 {
-          margin-top: 13px;  // 13 piksel üst boşluk
-          font-size: 20px;   // 20 piksel font büyüklüğü
-      }
+//       // Nested h3 styles
+//       h3 {
+//           margin-top: 13px;  // 13 piksel üst boşluk
+//           font-size: 20px;   // 20 piksel font büyüklüğü
+//       }
 
-      // Nested img styles
-      img {
-          width: 50%;                  // Resim genişliği %50
-          max-height: 100%;            // Maksimum yükseklik 400 piksel
-          object-fit: cover;           // Nesne uyumu (resmi kapla)
-          cursor: pointer;             // İmleç tipi
-          transition: transform 0.3s ease;  // Geçiş efekti: transform 0.3 saniye süresince, kolay (ease) fonksiyonu ile
+//       // Nested img styles
+//       img {
+//           width: 50%;                  // Resim genişliği %50
+//           max-height: 100%;            // Maksimum yükseklik 400 piksel
+//           object-fit: cover;           // Nesne uyumu (resmi kapla)
+//           cursor: pointer;             // İmleç tipi
+//           transition: transform 0.3s ease;  // Geçiş efekti: transform 0.3 saniye süresince, kolay (ease) fonksiyonu ile
 
-          &:hover {
-              transform: scale(1.05);   // Hover durumunda biraz büyütme efekti
+//           &:hover {
+//               transform: scale(1.05);   // Hover durumunda biraz büyütme efekti
+//           }
+//       }
+
+//       // Nested p styles
+//       p {
+//           margin-top: 10px;  // 10 piksel üst boşluk
+//       }
+
+//       // Nested ul styles
+//       ul {
+//           list-style: none;  // Alt liste işaretini kaldır
+//           padding: 0;        // İç boşluğu sıfırla
+//           margin-top: 10px;   // 10 piksel üst boşluk
+
+//           // Nested li styles
+//           li {
+//               margin-bottom: 5px;  // 5 piksel alt boşluk
+//           }
+//       }
+//   }
+
+//   // Link styles
+//   a {
+//     display: flex;
+//     flex-direction: column;
+//       align-items: center;
+//       text-decoration: none; // Altı çizili olmasın
+//      color: #333; // Varsayılan renk      // Metin rengi: koyu gri (#333)
+//   }
+// }
+
+
+
+// AlcoholicPage.scss
+
+// AlcoholicPage.scss
+
+.container2 {
+    max-width: 800px;
+    margin: 0 auto;
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Her satırda 3 öğe olsun */
+      gap: 50px; /* Öğeler arasındaki boşluk */
+  
+      li {
+        margin-bottom: 30px;
+  
+        .cocktail-link {
+          text-decoration: none;
+          color: #333;
+          display: block;
+  
+          img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
           }
-      }
-
-      // Nested p styles
-      p {
-          margin-top: 10px;  // 10 piksel üst boşluk
-      }
-
-      // Nested ul styles
-      ul {
-          list-style: none;  // Alt liste işaretini kaldır
-          padding: 0;        // İç boşluğu sıfırla
-          margin-top: 10px;   // 10 piksel üst boşluk
-
-          // Nested li styles
-          li {
-              margin-bottom: 5px;  // 5 piksel alt boşluk
+  
+          h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
           }
+  
+          p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #555;
+          }
+  
+          ul {
+            list-style: none;
+            padding: 0;
+  
+            li {
+              font-size: 14px;
+              margin-bottom: 5px;
+              color: #777;
+            }
+          }
+        }
       }
+    }
   }
-
-  // Link styles
-  a {
-      text-decoration: none;  // Metin dekorasyonunu kaldır
-      color: #333;            // Metin rengi: koyu gri (#333)
-  }
-}
+  

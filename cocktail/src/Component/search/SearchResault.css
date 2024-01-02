@@ -13,14 +13,6 @@ div ul li a {
   text-decoration: none;
   color: #333;
 }
-div ul li a img {
-  width: 100px;
-  height: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 8px;
-}
 div ul li a:hover {
   color: #333;
   text-decoration: none;

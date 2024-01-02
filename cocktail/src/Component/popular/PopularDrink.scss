@@ -21,15 +21,15 @@
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-      a {
+       a {
         text-decoration: none;
-        color: inherit;
-        display: block;
-        transition: transform 0.2s ease-in-out;
+      color: inherit;
+         display: block;
+         transition: transform 0.2s ease-in-out;
 
         &:hover {
-          transform: scale(1.05);
-        }
+           transform: scale(1.05);
+         }
 
         .drink-image-container {
           overflow: hidden;//bir öğenin sınırlarının dışına taşmamasını önler
@@ -49,4 +49,4 @@
       }
     }
   }
-}
+ }

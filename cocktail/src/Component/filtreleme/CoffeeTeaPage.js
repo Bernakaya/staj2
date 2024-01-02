@@ -37,7 +37,7 @@ const CoffeeTeaPage = () => {
           <li key={drink.idDrink}>
             
        
-            <Link to={`/drink/${drink.idDrink}`}>
+            <Link to={`/drink/${drink.idDrink}`} className="cocktail-link">
               <img src={drink.strDrinkThumb} alt={drink.strDrink} />
               <h3>{drink.strDrink}</h3>
             </Link>

@@ -37,7 +37,7 @@ const CocoaPage = () => {
           <li key={cocoa.idDrink}>
            
        
-            <Link to={`/drink/${cocoa.idDrink}`}>
+            <Link to={`/drink/${cocoa.idDrink}`} className='cocktail-link'>
               <img src={cocoa.strDrinkThumb} alt={cocoa.strDrink} />
                <h3>{cocoa.strDrink}</h3>
             </Link>
