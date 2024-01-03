@@ -35,9 +35,11 @@ const ShakePage = () => {
         {shakeList.map((drink) => (
           <li key={drink.idDrink}>
             <Link to={`/drink/${drink.idDrink}`} className="cocktail-link">
-    <h3>{drink.strDrink}</h3>
+   
     <img src={drink.strDrinkThumb} alt={drink.strDrink} />
+     <h3>{drink.strDrink}</h3>
   </Link>
+
             <ul>
               {Array.from({ length: 15 }, (_, index) => index + 1).map((ingredientIndex) => {
                 const ingredient = drink[`strIngredient${ingredientIndex}`];

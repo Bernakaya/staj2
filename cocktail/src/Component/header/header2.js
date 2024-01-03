@@ -27,7 +27,7 @@ const Header2 = ({ onSearch, onCategoryChange }) => {
       const responseData = await response.json();
       const drinks = responseData.drinks || [];
 
-      // onSearch prop'u kontrolü ve onSearch fonksiyonunu çağırma
+
       if (onSearch && typeof onSearch === 'function') {
         onSearch(drinks);
       } else {
@@ -74,7 +74,7 @@ const Header2 = ({ onSearch, onCategoryChange }) => {
               Anasayfa
             </Nav.Link>
 
-            <NavDropdown title={<span style={{ color: 'white' }}>Kategoriler</span>} id="basic-nav-dropdown">
+            <NavDropdown title={<span style={{ color: 'white' }}>Kategoriler</span>} className='' id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/alkollu" onClick={() => handleCategoryChange('alkollu')}>
                 Alkollü İçecekler
               </NavDropdown.Item>

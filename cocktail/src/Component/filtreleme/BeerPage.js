@@ -36,7 +36,7 @@ const BeerPage = () => {
           <li key={drink.idDrink}>
             
             {/* Resme tıklanabilir bir link ekleyin */}
-            <Link to={`/drink/${drink.idDrink}`}>
+            <Link to={`/drink/${drink.idDrink}`} className='cocktail-link' >
               <img src={drink.strDrinkThumb} alt={drink.strDrink} />
             </Link>
             <h3>{drink.strDrink}</h3>

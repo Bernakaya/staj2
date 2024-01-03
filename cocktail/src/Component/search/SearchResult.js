@@ -1,7 +1,8 @@
 // components/SearchResult.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './SearchResault.css';
+ import './SearchResault.css';
+
 
 const SearchResult = ({ searchResults }) => {
   // Her satırda gösterilecek içecek sayısı
@@ -23,7 +24,7 @@ const SearchResult = ({ searchResults }) => {
                 <img
                   src={drink.strDrinkThumb}
                   alt={drink.strDrink}
-                  style={{ width: '100px', height: '100px', objectFit: 'cover' ,borderRadius:'8px',marginBottom:'8px'}}
+                  style={{ width: '200px', height: '200px', objectFit: 'cover' ,borderRadius:'8px',marginBottom:'8px'}}
                 />
                 {drink.strDrink}
               </Link>

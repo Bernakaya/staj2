@@ -29,8 +29,9 @@
   margin-bottom: 10px;
 }
 .container2 ul li .cocktail-link h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 5px;
+  text-align: center;
 }
 .container2 ul li .cocktail-link p {
   font-size: 14px;
