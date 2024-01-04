@@ -1,4 +1,3 @@
-// BeerPage.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -8,12 +7,14 @@ const BeerPage = () => {
   useEffect(() => {
     const fetchBeerList = async () => {
       const url = 'https://the-cocktail-db.p.rapidapi.com/filter.php?c=Beer';
+      const headers = {
+        'X-RapidAPI-Key': '60bc55013dmsh1ce7455d35b1a1ap1d7b6cjsn81ab8b81d7a6',
+        'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
+      };
+
       const options = {
         method: 'GET',
-        headers: {
-          'X-RapidAPI-Key': '64d4522c07mshde4bf393369f4d5p1f3063jsn326b2c6e4693',
-          'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com',
-        },
+        headers: headers,
       };
 
       try {
@@ -34,13 +35,11 @@ const BeerPage = () => {
       <ul>
         {beerList.map((drink) => (
           <li key={drink.idDrink}>
-            
             {/* Resme tıklanabilir bir link ekleyin */}
-            <Link to={`/drink/${drink.idDrink}`} className='cocktail-link' >
+            <Link to={`/drink/${drink.idDrink}`} className='cocktail-link'>
               <img src={drink.strDrinkThumb} alt={drink.strDrink} />
             </Link>
             <h3>{drink.strDrink}</h3>
-        
             <ul>
               {Array.from({ length: 15 }, (_, index) => index + 1).map((ingredientIndex) => {
                 const ingredient = drink[`strIngredient${ingredientIndex}`];
@@ -55,7 +54,6 @@ const BeerPage = () => {
                 return null;
               })}
             </ul>
-         
           </li>
         ))}
       </ul>
