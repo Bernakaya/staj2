@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Provider } from 'react-redux'; // Redux store'u sağlamak için Provider ekleyin
+import { Provider } from 'react-redux';
 import PopularDrinks from './Component/popular/PopularDrinks';
 import DrinkDetail from './Component/popular/DrinkDetail';
 import AlcoholicPage from './Component/filtreleme/AlcoholicPage.js';
@@ -28,10 +28,15 @@ const App = () => {
       const response = await fetch(apiUrl, {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': '64d4522c07mshde4bf393369f4d5p1f3063jsn326b2c6e4693',
+          'X-RapidAPI-Key': '60bc55013dmsh1ce7455d35b1a1ap1d7b6cjsn81ab8b81d7a6',
           'X-RapidAPI-Host': 'the-cocktail-db.p.rapidapi.com'
         }
       });
+
+      if (response.status !== 200) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
       const responseData = await response.json();
       console.log(responseData.drinks || []);
     } catch (error) {
@@ -40,7 +45,7 @@ const App = () => {
   };
 
   return (
-    <Provider store={store}> 
+    <Provider store={store}>
       <Router>
         <div>
           <Header2 onSearch={handleSearch} />
@@ -60,7 +65,6 @@ const App = () => {
             <Route path="/ordinary-drink" element={<OrdinaryDrinkPage />} />
             <Route path="/other-unknown" element={<OtherUnknownPage />} />
             <Route path="/homemade-liqueur" element={<HomemadeLiqueurPage />} />
-            
             <Route path="/search/:query" element={<SearchPage />} />
           </Routes>
           <hr />

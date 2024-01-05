@@ -1,13 +1,13 @@
-// AlcoholicPage.js
+// AlcoholicCocktailPage.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const AlcoholicPage = () => {
+const AlcoholicCocktailPage = () => {
   const [cocktailList, setCocktailList] = useState([]);
 
   useEffect(() => {
     const fetchAlcoholicCocktailList = async () => {
-      const url = `https://${process.env.REACT_APP_API_HOST}/filter.php?a=Alcoholic`;
+      const url = 'https://the-cocktail-db.p.rapidapi.com/filter.php?a=Alcoholic'; // 'a=Alcoholic' added
       const options = {
         method: 'GET',
         headers: {
@@ -30,7 +30,7 @@ const AlcoholicPage = () => {
 
   return (
     <div className='container2'>
-      <h2>Alcoholic Cocktail List</h2>  
+      <h2>Alcoholic Cocktail List</h2>
       <ul>
         {cocktailList.map((cocktail) => (
           <li key={cocktail.idDrink}>
@@ -60,4 +60,4 @@ const AlcoholicPage = () => {
   );
 };
 
-export default AlcoholicPage;
+export default AlcoholicCocktailPage;
