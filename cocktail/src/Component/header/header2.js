@@ -63,7 +63,8 @@ const Header2 = ({ onSearch, onCategoryChange }) => {
     <header className="header">
       <Navbar expand="lg" className="nav-container">
         <Navbar.Brand as={Link} to="#home">
-        <Image src="logo7.jpg" alt="" width="200" height="150" />
+        <Image src="/logo7.jpg" alt="" width="200" height="150" />
+
 
         </Navbar.Brand>
 
