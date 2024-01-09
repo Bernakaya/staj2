@@ -1,0 +1,49 @@
+.container2 {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.container2 h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.container2 ul {
+  list-style: none;
+  padding: 0;
+}
+.container2 li {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.container2 li h3 {
+  margin-top: 13px;
+  font-size: 20px;
+}
+.container2 li img {
+  width: 95%;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.container2 li img:hover {
+  transform: scale(1.05);
+}
+.container2 li p {
+  margin-top: 10px;
+}
+.container2 li ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+.container2 li ul li {
+  margin-bottom: 5px;
+}
+.container2 a {
+  text-decoration: none;
+  color: #333;
+}/*# sourceMappingURL=commonstyle.css.map */
